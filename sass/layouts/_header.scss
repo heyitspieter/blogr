@@ -1,0 +1,253 @@
+.header {
+    z-index: 5;
+    position: relative;
+    background-size: auto;
+    padding: 5.6rem 0 19rem;
+    border-radius: 0 0 0 9rem;
+    background-repeat: no-repeat;
+    background-position: top 53.5% right 77.7%, 100%;
+    background-image: url("/assets/svg/bg-pattern-intro-desktop.svg"),
+        linear-gradient(to right, var(--color-primary-light-1), var(--color-primary-1));
+
+    @media screen and (max-width: 90em) {
+        background-position: top 53.5% right 74.7%, 100%;
+    }
+
+    @media screen and (max-width: 83em) {
+        background-position: top 53.5% right 73.7%, 100%;
+    }
+
+    @media screen and (max-width: 79em) {
+        background-position: top 53.5% right 72.7%, 100%;
+    }
+
+    @media screen and (max-width: 76.25em) {
+        background-position: top 53.5% right 68.5%, 100%;
+    }
+
+    @media screen and (max-width: 37.5em) {
+        padding-bottom: 15rem;
+        background-position: top 33.5% right 65.7%, 100%;
+        background-image: url("/assets/svg/bg-pattern-intro-mobile.svg"),
+            linear-gradient(to bottom, var(--color-primary-light-1), var(--color-primary-1));
+    }
+
+    &__menu,
+    &__hero {
+        display: flex;
+        max-width: 114rem;
+        align-items: center;
+    }
+
+    &__menu {
+        @media screen and (max-width: 76.25em) {
+            max-width: 98rem;
+        }
+
+        @media screen and (max-width: 59.4em) {
+            max-width: 100%;
+            padding: 0 4rem;
+        }
+
+        @media screen and (max-width: 37.5em) {
+            padding: 0 1.5rem;
+        }
+    }
+
+    &__menu {
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+
+    &__hero {
+        margin: 15rem auto 0;
+        flex-direction: column;
+
+        @media screen and (max-width: 90em) {
+            max-width: 100%;
+        }
+
+        @media screen and (max-width: 70em) {
+            margin-top: 8.5rem;
+        }
+
+        @media screen and (max-width: 70em) {
+            padding: 0 1.5rem;
+        }
+
+        h3 {
+            font-size: 5.7rem;
+            color: var(--color-white);
+            font-family: var(--font-secondary);
+
+            @media screen and (max-width: 59.4em) {
+                font-size: 5.4rem;
+            }
+
+            @media screen and (max-width: 50em) {
+                font-size: 5rem;
+            }
+
+            @media screen and (max-width: 37.5em) {
+                line-height: 1.4;
+                font-size: 4.2rem;
+                text-align: center;
+            }
+        }
+
+        p {
+            font-size: 2rem;
+            color: var(--color-white);
+            font-weight: 300 !important;
+            font-family: var(--font-secondary);
+
+            @media screen and (max-width: 37.5em) {
+                font-size: 2.3rem;
+                text-align: center;
+                margin-top: 1.5rem;
+            }
+        }
+
+        &-actions {
+            margin-top: 4rem;
+
+            @media screen and (max-width: 70em) {
+                margin-top: 5rem;
+            }
+
+            button {
+                font-weight: 600;
+                font-size: 1.6rem;
+                padding-left: 2.6rem;
+                padding-right: 2.6rem;
+
+                @media screen and (max-width: 70em) {
+                    font-size: 1.5rem;
+                }
+
+                @media screen and (max-width: 37.5em) {
+                    font-size: 2.1rem;
+                }
+            }
+
+            button:not(:last-child) {
+                margin-right: 1.5rem;
+            }
+        }
+    }
+}
+
+.menu {
+    &__list {
+        display: flex;
+        list-style: none;
+        margin-left: 7rem;
+        align-items: center;
+
+        @media screen and (max-width: 44em) {
+            display: none;
+        }
+
+        &-item {
+            position: relative;
+
+            &::after {
+                top: 0.6em;
+                right: -1.7em;
+                position: absolute;
+                display: inline-block;
+                content: url("/assets/svg/icon-arrow-light.svg");
+            }
+
+            a:link,
+            a:visited {
+                font-size: 1.6rem;
+                transition: all 0.2s ease;
+                color: var(--color-white-light);
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            &:not(:last-child) {
+                margin-right: 5rem;
+            }
+        }
+    }
+
+    &__list-item:focus-within::after {
+        transform: rotate(180deg);
+    }
+
+    &__list-item:focus-within > &__dropdown {
+        display: flex;
+    }
+
+    &__dropdown {
+        top: 4.2rem;
+        width: 15rem;
+        left: -2.4rem;
+        display: none;
+        padding: 2rem 0;
+        list-style: none;
+        position: absolute;
+        border-radius: 0.5rem;
+        flex-direction: column;
+        background-color: var(--color-white);
+
+        &-item {
+            display: block;
+
+            a:link,
+            a:visited {
+                width: 100%;
+                display: block;
+                font-weight: 300;
+                text-align: left;
+                font-size: 1.4rem;
+                padding: 0.3rem 2.1rem;
+                transition: all 0.35s ease;
+                color: var(--color-blue-dark-3);
+            }
+
+            a:hover {
+                font-weight: 600;
+                text-decoration: none;
+            }
+        }
+    }
+
+    &-left {
+        display: flex;
+        align-items: center;
+    }
+
+    &-right {
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 44em) {
+            display: none;
+        }
+
+        button {
+            font-weight: 600;
+            font-size: 1.6rem;
+            text-transform: capitalize;
+
+            &:not(:last-child) {
+                margin-right: 2.5rem;
+                color: var(--color-white-light);
+            }
+        }
+    }
+
+    &-toggler {
+        display: none;
+
+        @media screen and (max-width: 44em) {
+            display: block;
+        }
+    }
+}

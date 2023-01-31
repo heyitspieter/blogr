@@ -1,0 +1,106 @@
+.footer {
+    margin-top: 10rem;
+    border-radius: 0 10rem 0 0;
+    background-color: var(--color-blue-dark-3);
+
+    @media screen and (max-width: 37.5em) {
+        margin-top: 5rem;
+    }
+
+    &__grid {
+        display: flex;
+        margin: 0 auto;
+        max-width: 120rem;
+        padding: 7rem 0 7rem;
+        justify-content: space-evenly;
+
+        @media screen and (max-width: 90em) {
+            max-width: 114rem;
+        }
+
+        @media screen and (max-width: 76.25em) {
+            max-width: 98rem;
+        }
+
+        @media screen and (max-width: 70em) {
+            max-width: 93rem;
+        }
+
+        @media screen and (max-width: 59.4em) {
+            max-width: 100%;
+            padding-left: 4rem;
+            padding-right: 4rem;
+        }
+
+        @media screen and (max-width: 37.5em) {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+
+    &__col {
+        display: flex;
+        margin-right: auto;
+        flex-direction: column;
+
+        &:first-child {
+            @media screen and (max-width: 37.5em) {
+                margin-bottom: 2rem;
+            }
+        }
+
+        &:not(:first-child) {
+            @media screen and (max-width: 37.5em) {
+                margin-top: 5rem;
+            }
+        }
+
+        @media screen and (max-width: 37.5em) {
+            margin-right: 0;
+        }
+
+        h4 {
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+            color: var(--color-white);
+
+            @media screen and (max-width: 37.5em) {
+                font-size: 2.2rem;
+                text-align: center;
+                margin-bottom: 2.5rem;
+            }
+        }
+
+        ul {
+            list-style: none;
+
+            li {
+                &:not(:last-child) {
+                    margin-bottom: 1rem;
+                }
+
+                @media screen and (max-width: 37.5em) {
+                    text-align: center;
+                }
+
+                a:link,
+                a:visited {
+                    font-weight: 300;
+                    font-size: 1.5rem;
+                    color: var(--color-blue-grey);
+                    transition: all 0.35s ease;
+
+                    @media screen and (max-width: 37.5em) {
+                        font-size: 1.8rem;
+                    }
+                }
+
+                a:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

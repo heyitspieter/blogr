@@ -1,0 +1,47 @@
+:root {
+    --font-primary: "Ubuntu", sans-serif;
+    --font-secondary: "Overpass", sans-serif;
+
+    --color-primary: hsl(356, 100%, 66%);
+    --color-primary-light: hsl(355, 100%, 74%);
+
+    --color-blue-dark-1: hsl(208, 49%, 24%);
+    --color-blue-dark-2: hsl(207, 13%, 34%);
+    --color-blue-dark-3: hsl(240, 10%, 16%);
+    --color-blue-dark-4: hsl(237, 17%, 21%);
+    --color-blue-dark-5: hsl(237, 23%, 32%);
+    --color-blue-grey: hsl(240, 2%, 79%);
+
+    --color-white: hsl(0, 0%, 100%);
+    --color-white-light: hsla(0, 0%, 100%, 0.65);
+
+    --color-primary-1: hsl(353, 100%, 62%);
+    --color-primary-light-1: hsl(13, 100%, 72%);
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+
+    @media screen and (max-width: 70em) {
+        font-size: 59%;
+    }
+
+    @media screen and (max-width: 57em) {
+        font-size: 55%;
+    }
+}
+
+body {
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+    font-weight: 600;
+    line-height: 1.6;
+}

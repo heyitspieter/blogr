@@ -1,0 +1,7 @@
+.link {
+    &:link,
+    &:visited {
+        text-decoration: none;
+        font-family: var(--font-primary);
+    }
+}
